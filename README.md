@@ -6,7 +6,7 @@ To set this up:
 2. Create the shared library (running `make` in the `cpp/` directory)
 2. Copy the resulting shared library (in this case, called `exe.so`) into the same directory as the Go file, but prefix the filename with `lib` (i.e. the new name should be `libexe.so`).
 4. Copy the header file (in this case, `main.h`) into the same directory as the Go file, but remove the `extern "C"`.
-5. Add the following lines to the top of the `main.go` file:
+5. Add the following lines to the top of the `main.go` file (but without the blank lines between each line):
 
 > // #include "exe.h"
 > 
