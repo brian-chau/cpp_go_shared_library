@@ -9,8 +9,11 @@ To set this up:
 5. Add the following lines to the top of the `main.go` file:
 
 > // #include "exe.h"
+> 
 > // #cgo CFLAGS: -I/home/user/repos/go_cpp_shared_library
+> 
 > // #cgo LDFLAGS: -L/home/user/repos/go_cpp_shared_library  -lexe
+> 
 > import "C"
 
 
