@@ -8,7 +8,7 @@
 #include <string>
 #include <sys/stat.h>
 
-#include "main.h"
+#include "libABC.h"
 #include "types.h"
 
 void count_PU_DO_Locations( const char* filename, int * pu_count, int * do_count ){

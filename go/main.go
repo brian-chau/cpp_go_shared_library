@@ -1,6 +1,6 @@
 package main
 
-// #include "exe.h"
+// #include "libABC.h"
 // #cgo CFLAGS: -I.
 // #cgo LDFLAGS: -L. -lABC
 import "C"

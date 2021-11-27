@@ -2,22 +2,21 @@
 
 To set this up:
 
-1. When creating the shared library (*.so) file, if it is a C++ application (in this case, it is), then ensure that the header is surrounded with an `extern "C"`.
-2. Create the shared library (running `make` in the `cpp/` directory)
+1. Create the shared library (running `make` in the `cpp/` directory)
 2. Move the resulting shared library into your `/usr/lib` folder.
-4. Copy the header file (in this case, `exe.h`) into the same directory as the Go file, but remove the `extern "C"`.
-5. Add the following lines to the top of the `main.go` file (but without the blank lines between each line):
+3. Copy the header file (in this case, `libABC.h`) into the same directory as your Go application, but remove the `extern "C"` from the file.
+4. Add the following lines to the top of the `main.go` file (but without the blank lines between each line):
 
 > // #include "exe.h"\n
 > // #cgo CFLAGS: -I.\n
 > // #cgo LDFLAGS: -L.  -lABC\n
 > import "C"\n
 
-...where both CFLAGS and LFLAGS point to the directory of the shared library `libexe.so`, and the `-l` part points to the shared library name without the `lib` nor the `.so` extension.
+...where the `-l` part is the name of shared library name without the `lib` prefix nor the `.so` suffix.
 
-6. Build the Go app, and run it!
+5. Build the Go app, and run it!
 
 > go build main.go
 > ./main.go
 
-7. Tada! You've linked a C++ shared library to a Go application!
+6. Tada! You've linked a C++ shared library to a Go application!
