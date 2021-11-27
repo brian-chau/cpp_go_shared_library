@@ -10,7 +10,7 @@ To set this up:
 > // #include "exe.h"<br/>
 > // #cgo CFLAGS: -I.<br/>
 > // #cgo LDFLAGS: -L. -lABC<br/>
-> import "C"\n
+> import "C"
 
 ...where the `-l` part is the name of shared library name without the `lib` prefix nor the `.so` suffix.
 
