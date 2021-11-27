@@ -5,7 +5,7 @@ To set this up:
 1. Create the shared library (running `make` in the `cpp/` directory)
 2. Move the resulting shared library into your `/usr/lib` folder.
 3. Copy the header file (in this case, `libABC.h`) into the same directory as your Go application, but remove the `extern "C"` from the file.
-4. Add the following lines to the top of the `main.go` file (but without the blank lines between each line):
+4. Add the following lines to the top of the `main.go` file.
 
 > // #include "exe.h"<br/>
 > // #cgo CFLAGS: -I.<br/>
