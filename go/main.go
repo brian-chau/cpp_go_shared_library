@@ -1,8 +1,8 @@
 package main
 
 // #include "exe.h"
-// #cgo CFLAGS: -I/home/user/repos/go_cpp_shared_library
-// #cgo LDFLAGS: -L/home/user/repos/go_cpp_shared_library  -lexe
+// #cgo CFLAGS: -I.
+// #cgo LDFLAGS: -L. -lABC
 import "C"
 
 import (

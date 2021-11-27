@@ -30,7 +30,7 @@ SRCS := $(wildcard sources/*.cpp)
 OBJS := $(SRCS:.cpp=.o)
 
 # define the executable file
-MAIN := exe.so
+MAIN := libABC.so
 
 .PHONY: depend clean clean_all
 
@@ -41,7 +41,7 @@ $(MAIN): $(OBJS)
 	# TODO: If you want to create a normal binary file, use this
 	# $(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
 	# TODO: If you want to create a shared library, use this
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBS) -o $@ $^
 
 .cpp.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
