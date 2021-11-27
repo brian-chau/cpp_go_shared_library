@@ -16,7 +16,7 @@ To set this up:
 
 5. Build the Go app, and run it!
 
-> go build main.go
+> go build main.go<br/>
 > ./main.go
 
 6. Tada! You've linked a C++ shared library to a Go application!
