@@ -7,9 +7,9 @@ To set this up:
 3. Copy the header file (in this case, `libABC.h`) into the same directory as your Go application, but remove the `extern "C"` from the file.
 4. Add the following lines to the top of the `main.go` file (but without the blank lines between each line):
 
-> // #include "exe.h"\n
-> // #cgo CFLAGS: -I.\n
-> // #cgo LDFLAGS: -L.  -lABC\n
+> // #include "exe.h"<br/>
+> // #cgo CFLAGS: -I.<br/>
+> // #cgo LDFLAGS: -L. -lABC<br/>
 > import "C"\n
 
 ...where the `-l` part is the name of shared library name without the `lib` prefix nor the `.so` suffix.
